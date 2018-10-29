@@ -1,5 +1,12 @@
 ---
 title: "About Me"
+output: 
+  html_document:
+    theme: spacelab
+    highlight: tango
+    toc: true
+    toc_depth: 4
+    toc_float: true
 ---
 
 ###**EDUCATION**
@@ -66,7 +73,7 @@ Technical: R, SAS, Geographic Information Systems (GIS), IBM SPSS, InDesign, Ven
 
 *	Coded interview responses using Dedoose into four categories (i.e. Initiation, Adherence, Sex, and HIV Testing) to detect patterns of beliefs and behaviors 
 
-###**LEADERSHIP, AWARDS & SERVICE**
+###**AWARDS & SERVICE**
 
 **Senior Leadership Recognition 										            May 2017**
 

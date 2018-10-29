@@ -4,4 +4,4 @@ title: "Francois' Page"
 
 ### This is the website I created for P8105: Data Science HW4 
 
-And I can put all kinds of stuff on it!
+<img src="image/linkedin_pic.png" style="width:75%">
