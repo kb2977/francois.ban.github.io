@@ -1,8 +1,10 @@
-name: "p8105_HW4_kb2977"
+name: "p8105_hw4_kb2977"
 output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "About"
+      href: about.html
     - text: "About"
       href: about.html
     - icon: fa-envelope fa-lg
