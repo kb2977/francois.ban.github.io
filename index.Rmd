@@ -1,7 +1,9 @@
 ---
-title: "Francois' Page"
+title: "Francois' Webpage"
 ---
 
 ### This is the website I created for P8105: Data Science HW4 
+### Check out the "About" tab for my past academic and professional experience
 
-<img src="image/linkedin_pic.png" style="width:75%">
+---
+<img src="image/linkedin_pic.png" style="width:55%">
