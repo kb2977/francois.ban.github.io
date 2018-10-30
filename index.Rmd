@@ -1,9 +1,22 @@
 ---
-title: "Francois' Webpage"
+title: "Francois Ban"
 ---
 
-### This is the website I created for P8105: Data Science HW4 
-### Check out the "About" tab for my past academic and professional experience
+#### Quantitative Foundations Teaching Assistant
+#### Columbia University Mailman School of Public Health
 
 ---
+<center>
 <img src="image/linkedin_pic.png" style="width:55%">
+
+
+###Contact Information:
+
+Francois Ban  
+[Department of Epidemiology](https://www.mailman.columbia.edu/become-student/departments/epidemiology)  
+[Columbia Mailman School of Public Health](https://www.mailman.columbia.edu/)  
+100 Haven Ave, 12H  
+New York NY, 10032
+
+Personal Email: [Click Here!](mailto:francois.ban1214@gmail.com)
+Phone: 631.617.2859

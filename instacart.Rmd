@@ -1,0 +1,55 @@
+---
+title: "Instacart Dataset"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(flexdashboard)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+data(instacart)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+items_ordered = 
+  instacart %>% 
+  count(aisle) %>%
+  mutate(aisle = forcats::fct_reorder(aisle, desc(n))) %>% 
+  ggplot(aes(x = aisle, y = n)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), text = element_text(size = 10)) +
+      scale_x_discrete(breaks = c("fresh vegetables", "frozen produce", "paper goods", "missing", "granola", "bakery desserts", "more household", "beauty")) +
+  labs(
+      title = "Plot of Items Ordered in Each Aisle",
+      x = "Aisle Name",
+      y = "Number of Items",
+      caption = "Data from the instacart package"
+  )
+items_ordered
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+

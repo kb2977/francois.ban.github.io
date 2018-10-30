@@ -2,7 +2,7 @@
 title: "About Me"
 output: 
   html_document:
-    theme: spacelab
+    theme: flatly
     highlight: tango
     toc: true
     toc_depth: 4
