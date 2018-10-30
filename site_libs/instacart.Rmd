@@ -8,6 +8,9 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+devtools::install_github("p8105/p8105.datasets")
+library(p8105.datasets)
+data(instacart)
 ```
 
 Column {data-width=650}
