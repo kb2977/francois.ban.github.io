@@ -1,5 +1,8 @@
 ---
 title: "Francois Ban"
+output: 
+  html_document:
+    theme: flatly
 ---
 
 #### Quantitative Foundations Teaching Assistant
@@ -18,5 +21,5 @@ Francois Ban
 100 Haven Ave, 12H  
 New York NY, 10032
 
-Personal Email: [Click Here!](mailto:francois.ban1214@gmail.com)
+Personal Email: [Click Here!](mailto:francois.ban1214@gmail.com)  
 Phone: 631.617.2859

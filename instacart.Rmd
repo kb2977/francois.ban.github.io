@@ -12,44 +12,87 @@ library(flexdashboard)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
+library(ggridges)
 data(instacart)
 ```
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Chart A
 
-```{r}
-items_ordered = 
+```{r top_items}
+
+top_items = 
   instacart %>% 
-  count(aisle) %>%
-  mutate(aisle = forcats::fct_reorder(aisle, desc(n))) %>% 
-  ggplot(aes(x = aisle, y = n)) +
-  geom_bar(stat = "identity") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), text = element_text(size = 10)) +
-      scale_x_discrete(breaks = c("fresh vegetables", "frozen produce", "paper goods", "missing", "granola", "bakery desserts", "more household", "beauty")) +
-  labs(
-      title = "Plot of Items Ordered in Each Aisle",
-      x = "Aisle Name",
-      y = "Number of Items",
-      caption = "Data from the instacart package"
-  )
-items_ordered
+  count(product_name) %>% 
+  top_n(20)
+
+top_items %>% 
+  mutate(product_name = as.factor(product_name),
+         product_name = fct_reorder(product_name, n)) %>% 
+  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar") %>% 
+  layout(title = "Top 10 Items Ordered", 
+         xaxis = list(title = "Product Name"), 
+         yaxis = list(title = "Number of Items"))
+top_items
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B
 
 ```{r}
+set.seed(1)
+instacart_sample = 
+  instacart %>% 
+  sample_n(10000)
 
+instacart_sample %>%
+  group_by(order_hour_of_day, department) %>% 
+  summarize(count = n()) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~count, color = ~department, type = "scatter", mode = "markers") %>% 
+  layout(
+    title = "Hour vs orders Line Graph", 
+    xaxis = list(title = "Hour"),
+    yaxis = list(title = "Number of Items")
+    )
+
+instacart_sample
+```
+
+```{r}
+instacart %>%
+  group_by(order_hour_of_day) %>%
+  summarize(orders = n()) %>% plot_ly(x = ~order_hour_of_day, y = ~orders, type = "scatter", mode = "lines",
+          alpha = 0.5) %>% 
+  layout(
+    title = "Hour vs orders Line Graph", xaxis = list(title = "hour"))
 ```
 
 ### Chart C
 
-```{r}
+```{r dist_of_orders}
+set.seed(1)
 
+dist_of_orders =
+  instacart %>%
+  sample_n(10000) %>% 
+  mutate(order_dow = recode(order_dow, 
+                            `0` = "Sunday", 
+                            `1` = "Monday", 
+                            `2` = "Tuesday", 
+                            `3` = "Wednesday", 
+                            `4` = "Thursday", 
+                            `5` = "Friday", 
+                            `6` = "Saturday"), 
+         order_dow = forcats::fct_relevel(order_dow, c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"))
+         ) %>% 
+  plot_ly(x = ~order_dow, y = ~order_hour_of_day, color = ~order_dow, type = "box") %>% 
+   layout(
+     title = "Distribution of Orders by Day of the Week", yaxis = list(title = "Hour"), xaxis = list(title = "Day of the Week"))
+
+dist_of_orders
 ```
 
