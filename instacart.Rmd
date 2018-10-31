@@ -45,6 +45,7 @@ Column {data-width=450}
 
 ```{r}
 set.seed(1)
+
 instacart_sample = 
   instacart %>% 
   sample_n(10000)
@@ -52,23 +53,18 @@ instacart_sample =
 instacart_sample %>%
   group_by(order_hour_of_day, department) %>% 
   summarize(count = n()) %>%
-  plot_ly(x = ~order_hour_of_day, y = ~count, color = ~department, type = "scatter", mode = "markers") %>% 
+  plot_ly(x = ~order_hour_of_day, y = ~count, color = ~department, hoverinfo = 'text',
+          text = ~paste('</br> Department: ', department,
+                        '</br> Number of Items: ', count,
+                      '</br> Hour: ', order_hour_of_day), 
+type = "scatter", mode = "markers") %>% 
   layout(
-    title = "Hour vs orders Line Graph", 
-    xaxis = list(title = "Hour"),
+    title = "Number of Items Ordered by Department", 
+    xaxis = list(title = "Time of Day"),
     yaxis = list(title = "Number of Items")
     )
 
 instacart_sample
-```
-
-```{r}
-instacart %>%
-  group_by(order_hour_of_day) %>%
-  summarize(orders = n()) %>% plot_ly(x = ~order_hour_of_day, y = ~orders, type = "scatter", mode = "lines",
-          alpha = 0.5) %>% 
-  layout(
-    title = "Hour vs orders Line Graph", xaxis = list(title = "hour"))
 ```
 
 ### Chart C
