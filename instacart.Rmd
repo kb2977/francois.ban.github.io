@@ -31,7 +31,10 @@ top_items =
 top_items %>% 
   mutate(product_name = as.factor(product_name),
          product_name = fct_reorder(product_name, n)) %>% 
-  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar") %>% 
+  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", hoverinfo = 'text',
+          text = ~paste('</br> Product Name: ', product_name,
+                        '</br> Number of Items: ', n)
+          ) %>% 
   layout(title = "Top 10 Items Ordered", 
          xaxis = list(title = "Product Name"), 
          yaxis = list(title = "Number of Items"))
@@ -53,11 +56,12 @@ instacart_sample =
 instacart_sample %>%
   group_by(order_hour_of_day, department) %>% 
   summarize(count = n()) %>%
-  plot_ly(x = ~order_hour_of_day, y = ~count, color = ~department, hoverinfo = 'text',
+  plot_ly(x = ~order_hour_of_day, y = ~count, color = ~department, 
+          type = "scatter", mode = "markers", hoverinfo = 'text',
           text = ~paste('</br> Department: ', department,
                         '</br> Number of Items: ', count,
-                      '</br> Hour: ', order_hour_of_day), 
-type = "scatter", mode = "markers") %>% 
+                        '</br> Hour: ', order_hour_of_day)
+          ) %>% 
   layout(
     title = "Number of Items Ordered by Department", 
     xaxis = list(title = "Time of Day"),
