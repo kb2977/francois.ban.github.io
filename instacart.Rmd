@@ -46,7 +46,7 @@ Column {data-width=450}
 
 ### Chart B
 
-```{r}
+```{r instacart_items}
 set.seed(1)
 
 instacart_sample = 
@@ -95,4 +95,3 @@ dist_of_orders =
 
 dist_of_orders
 ```
-
