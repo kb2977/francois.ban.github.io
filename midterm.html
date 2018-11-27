@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Francois Ban" />
+
+<meta name="date" content="2018-10-18" />
+
+<title>Miterm</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="resume.html">Resume</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="instacart.html">Instacart</a>
+    </li>
+    <li>
+      <a href="midterm.html">Midterm</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="mailto:&lt;kb2977@cumc.columbia.edu&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/kb2977/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/francois-ban-120331149/">
+    <span class="fab fa fab fa-linkedin"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Miterm</h1>
+<h4 class="author"><em>Francois Ban</em></h4>
+<h4 class="date"><em>10/18/2018</em></h4>
+
+</div>
+
+
+<div id="part-1-loading-cleaning-wrangling-data" class="section level2">
+<h2>Part 1: Loading, Cleaning, Wrangling Data</h2>
+<pre class="r"><code>patient_data = 
+  read_csv(file = &quot;./data/midterm_data.csv&quot;) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  gather(key = minute, value = activity_count, activity_1:activity_1440) %&gt;%
+  separate(minute, into = c(&quot;remove_1&quot;, &quot;minute&quot;), sep = &quot;_&quot;) %&gt;%
+  select(-&quot;remove_1&quot;) %&gt;% 
+  mutate(minute = as.numeric(minute),
+         day = as.factor(day),
+         activity_count = as.integer(activity_count)
+         )</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double(),
+##   week = col_integer(),
+##   day = col_character()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
+<p>After loading and cleaning the datset, the following variables were included: activity_count, day, minute, week. There were 473760 observations over a total of 47 weeks. We have specific activity for each minute of each day of the week. The maximum activity count that was observed over a one-minute epoch was 10417 and the minimum activity count that was observed was 1. The most frequently observed activity count was 1 meaning many minutes throughout the day, this patient had minimal activity.</p>
+</div>
+<div id="part-2-activity-over-time" class="section level2">
+<h2>Part 2: Activity over Time</h2>
+<p>Below is a graph that determines if this participant became more active over time. We can see from the graph that although there are a couple of dips (i.e. at Week 3, at Week 12) there is a general upwards trend. In addition, after conducting a linear regression, we see that there is a positive linear relationship between week and average activity count (i.e. p-value - 0.0000142), meaning that as time goes, this patient increases in activity and therefore, his treatment is working and he is improving in health.</p>
+<pre class="r"><code>patient_data_week = 
+  patient_data %&gt;% 
+  group_by(week) %&gt;% 
+  summarize(mean_activity_count = mean(activity_count))
+
+week_plot = 
+  patient_data_week %&gt;% 
+  ggplot(aes(x = week, y = mean_activity_count)) + 
+  geom_line(alpha = .5) +
+  labs(
+      title = &quot;Average Activity Throughout the Weeks&quot;,
+      x = &quot;Week&quot;,
+      y = &quot;Average Activity Count&quot;,
+      caption = &quot;Data from the Advanced Cardiac Care Center of Columbia University Medical Center&quot;
+  ) 
+week_plot</code></pre>
+<p><img src="midterm_files/figure-html/unnamed-chunk-1-1.png" width="90%" /></p>
+<pre class="r"><code>stat_test =
+  patient_data_week %&gt;%
+  lm(mean_activity_count ~ week, data = .) %&gt;%
+  broom::tidy() %&gt;% 
+  knitr::kable(digits = 1)
+stat_test</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">term</th>
+<th align="right">estimate</th>
+<th align="right">std.error</th>
+<th align="right">statistic</th>
+<th align="right">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">173.8</td>
+<td align="right">15.7</td>
+<td align="right">11.1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">week</td>
+<td align="right">2.8</td>
+<td align="right">0.6</td>
+<td align="right">4.9</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>Below is a graph that looks at day of the week and total activity count. The red dots represent the median activity counts and blue dots represent the mean activity count for that day. For every day of the week, the mean is slightly below the median meaning the data is slightly skewed left. This is most likely because many activity counts were 0. It is evident that this patient was most active on Friday as the graph shows it had the greatest median and mean activity count.</p>
+<pre class="r"><code>day_data_isolation = 
+  patient_data %&gt;% 
+  mutate(day = forcats::fct_relevel(day, c(&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;))) %&gt;% 
+  group_by(week, day) %&gt;%
+  summarize(total_activity_count = sum(activity_count)) %&gt;% 
+  ggplot(aes(x = day, y = total_activity_count)) + 
+  geom_violin(aes(fill = day), color = &quot;blue&quot;, alpha = .5) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), text = element_text(size = 9)) +
+  labs(
+      title = &quot;Activity Across Days of the Week&quot;,
+      x = &quot;Day&quot;,
+      y = &quot;Total Activity Count&quot;,
+      caption = &quot;Data from the Advanced Cardiac Care Center of Columbia University Medical Center&quot;
+  ) +
+  scale_y_continuous(breaks = c(0, 200000, 400000, 600000, 800000), 
+                     labels = c(&quot;0&quot;, &quot;200000&quot;, &quot;400000&quot;, &quot;600000&quot;, &quot;800000&quot;)) +
+  stat_summary(fun.y = mean, geom = &quot;point&quot;, color = &quot;blue&quot;, size = 2) +
+  stat_summary(fun.y = median, geom = &quot;point&quot;, color = &quot;red&quot;, size = 2)
+day_data_isolation</code></pre>
+<p><img src="midterm_files/figure-html/stats_by_day-1.png" width="90%" /></p>
+<p>The graph below examines the relationship between time and average activity by day of the week. Average activity for the first couple of weeks on Saturday are well below 100 which is drastically different from the other days of the week. Furthermore, although over time, mean activity generally increases for all days of the week, for Saturday, Monday, and Friday, there is a drastic increase in mean activity after week 30.</p>
+<pre class="r"><code>activity_data_over_time = 
+  patient_data %&gt;%
+  mutate(day = forcats::fct_relevel(day, c(&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;))) %&gt;%
+  group_by(week, day) %&gt;% 
+  summarize(mean_activity = mean(activity_count)) %&gt;% 
+  ggplot(aes(x = week, y = mean_activity, color = day)) +
+  geom_smooth(se = FALSE) +
+  facet_grid(~day) +
+  theme(text = element_text(size = 8)) +
+labs(
+      title = &quot;Activity for Each Day Across Time&quot;,
+      x = &quot;Time in Weeks&quot;,
+      y = &quot;Mean Activity Count&quot;,
+      caption = &quot;Data from the Advanced Cardiac Care Center of Columbia University Medical Center&quot;
+  )
+activity_data_over_time</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="midterm_files/figure-html/activity_data_over_time-1.png" width="90%" /></p>
+</div>
+<div id="part-3-activity-within-a-day" class="section level2">
+<h2>Part 3: Activity within a Day</h2>
+<p>Below is the average activity count over 24 hours within a day. Using this graph, it is evident that this patient is most active around 9:00AM to 9:00PM each day. During this time, average activity count ranges from 300 to 400 and there is a sharp increase in activity count from 6:00AM to 9:00AM and a sharp decrease in activity count from 9:00PM to 11:59PM.</p>
+<pre class="r"><code>activity_over_day_plot = 
+  patient_data %&gt;%
+  group_by(minute) %&gt;% 
+  summarize(mean_activity = mean(activity_count)) %&gt;% 
+  ggplot(aes(x = minute, y = mean_activity)) +
+  geom_point() +
+  geom_smooth(se = FALSE) +
+  labs(
+      title = &quot;Average Activity Throughout the Day&quot;,
+      x = &quot;Time of Day&quot;,
+      y = &quot;Average Activity Count&quot;,
+      caption = &quot;Data from the Advanced Cardiac Care Center of Columbia University Medical Center&quot;
+  ) +
+  scale_x_continuous(breaks = c(0, 360, 720, 1080, 1440), 
+                     labels = c(&quot;12:00AM&quot;, &quot;6:00AM&quot;, &quot;12:00PM&quot;, &quot;6:00PM&quot;, &quot;11:59PM&quot;))
+activity_over_day_plot</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<p><img src="midterm_files/figure-html/activity_in_day-1.png" width="90%" /></p>
+<p>Below is a graph that shows average activity over 24 hours separated by day of the week. The graphs shows two peaks in which this patient had the highest average activity around 9:00AM to 12:00PM and 3:00PM to 6:00PM on Sundays. For other days such as Mondays, Tuesdays, and Wednesdays, this patient had an average activity level of 300 to 400 from 9:00AM to 9:00PM and on days such as Thursdays and Fridays, his peak average activity was around 6:00PM to 9:00PM.</p>
+<pre class="r"><code>activity_by_day_plot = 
+  patient_data %&gt;%
+  mutate(day = forcats::fct_relevel(day, c(&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;))) %&gt;%
+  group_by(minute, day) %&gt;% 
+  summarize(mean_activity = mean(activity_count)) %&gt;% 
+  ggplot(aes(x = minute, y = mean_activity, color = day)) +
+  geom_smooth(se = FALSE) +
+  facet_grid(~day) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), text = element_text(size = 7)) +
+  labs(
+      title = &quot;Average Activity by Day of the Week&quot;,
+      x = &quot;Time of Day&quot;,
+      y = &quot;Average Activity Count&quot;,
+      caption = &quot;Data from the Advanced Cardiac Care Center of Columbia University Medical Center&quot;
+  ) +
+  scale_x_continuous(breaks = c(0, 360, 720, 1080, 1440), 
+                     labels = c(&quot;12:00AM&quot;, &quot;6:00AM&quot;, &quot;12:00PM&quot;, &quot;6:00PM&quot;, &quot;11:59PM&quot;))
+activity_by_day_plot</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<p><img src="midterm_files/figure-html/activity_by_day-1.png" width="90%" /></p>
+<pre class="r"><code>wordcountaddin::text_stats(&quot;midterm.Rmd&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Method</th>
+<th align="left">koRpus</th>
+<th align="left">stringi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Word count</td>
+<td align="left">497</td>
+<td align="left">471</td>
+</tr>
+<tr class="even">
+<td align="left">Character count</td>
+<td align="left">2801</td>
+<td align="left">2800</td>
+</tr>
+<tr class="odd">
+<td align="left">Sentence count</td>
+<td align="left">41</td>
+<td align="left">Not available</td>
+</tr>
+<tr class="even">
+<td align="left">Reading time</td>
+<td align="left">2.5 minutes</td>
+<td align="left">2.4 minutes</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

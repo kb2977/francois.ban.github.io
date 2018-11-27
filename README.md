@@ -1,2 +1,2 @@
-# p8105_hw4_kb2977.github.io
+# francois.ban.github.io
 my personal website
