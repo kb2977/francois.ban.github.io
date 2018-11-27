@@ -10,10 +10,11 @@ output:
 
 ---
 <center>
-<img src="image/linkedin_pic.png" style="width:55%">
+<img src="image/linkedin_pic.png" style="width:55%">  
 
+<center> 
 
-###Contact Information:
+Contact Information:
 
 Francois Ban  
 [Department of Epidemiology](https://www.mailman.columbia.edu/become-student/departments/epidemiology)  
