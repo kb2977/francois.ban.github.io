@@ -5,12 +5,8 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html
-    - text: "Projects"
-      menu: 
-        - text: "Instacart"
-          href: instacart.html
-        - text: "Midterm"
-          href: midterm.html
+    - text: "Instacart"
+      href: instacart.html
     - icon: fa-envelope fa-lg
       href: mailto:<kb2977@cumc.columbia.edu>
     - icon: fa-github fa-lg
