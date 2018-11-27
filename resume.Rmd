@@ -1,0 +1,95 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    theme: flatly
+    highlight: tango
+    toc: true
+    toc_depth: 4
+    toc_float: true
+---
+
+###**EDUCATION**
+
+**Columbia University, New York, NY** *May 2019*
+
+Masters in Public Health, Epidemiology
+
+Certification in Advanced Epidemiology
+
+GPA: 4.00
+
+**Carnegie Mellon University, Pittsburgh, PA** *May 2017*
+
+Bachelors of Science in Psychology
+
+GPA: 3.73
+
+---
+
+###**SKILLS**
+
+R, SAS, Geographic Information Systems (GIS), IBM SPSS, InDesign, Vensim, Qualtrics, Dedoose, Coding Analysis Toolkit, Lucidchart, E-Prime, TOBI Eye Tracking, Near-Infrared Spectroscopy (NIRS), Python, Mechanical Turk, Microsoft Excel
+
+---
+
+###**WORK EXPERIENCE**
+
+**Quantitative Foundations at Columbia University, Teaching Assistant**	 *August 2018 – Current*
+
+*	Managed a quantitative lab section with 20+ students to reinforce statistical and epidemiological methods
+
+*	Developed and piloted homework material, held weekly office hours, graded all student assessments
+
+*	Provided outside support via email and extra help sessions for students
+
+**Global Healthy Living Foundation, Graduate Fellow Intern** *May 2018 – Aug 2018*
+
+*	Utilized SAS to import, clean, and analyze data sets from ArthritisPower, a patient research registry
+
+*	Used a variety of programs such as InDesign and WIX to design website templates for a research dissemination site
+
+*	Created a survey on health and fitness using Survey Monkey and disseminated the results by writing an executive summary
+
+*	Co-led a summer intern project on social media (i.e. Facebook) and arthritis and created a presentation deliverable 
+
+**Honors Undergraduate Thesis, Primary Investigator**	*Aug 2016 – May 2017*
+
+*	Developed an independent research project on the psychological benefits of communal coping and how it applies to two different cultures 
+
+*	Collected survey data for 80 participants using Qualtrics and determined correlations using SPSS
+
+*	Compiled results into a research paper and presented findings at Meeting of the Minds for 10 people
+
+**Cognitive Development Lab, Research Assistant** *Jan 2015 – May 2017*
+
+*	Performed an experiment using Near-Infrared Spectroscopy on 60 participants to determine if categorical induction activated the prefrontal cortex
+
+*	Utilized E-Prime and TOBI Eye-Tracking Device to detect response times and eye movements
+
+
+**Behavioral Science & HIV Prevention Lab, Research Assistant** *Jan 2016 – Aug 2016*
+
+*	Researched qualitative and quantitative mental models of 45 HIV patients in Southern Africa
+
+*	Developed behavioral recommendations using Lucidchart and increased the adherence to medication such as PrEP for patients in South Africa
+
+*	Coded interview responses using Dedoose into four categories (i.e. Initiation, Adherence, Sex, and HIV Testing) to detect patterns of beliefs and behaviors 
+
+---
+
+###**AWARDS & SERVICE**
+
+**Senior Leadership Recognition** *May 2017*
+
+*	Nominated and awarded the senior leadership award in the context of Academic and Research category by Dr. Joseph Devine, associate dean of Dietrich College
+
+*	Acknowledgement for outstanding leadership proven by Senior Honors Thesis and its enhancing contributions to the community
+
+**Heredia Hospital - Costa Rica, Intern**	*May 2016 – Aug 2016*
+
+*	Shadowed local doctors at the Medical Clinic to gain a first-hand experience of working as a physician in another country
+
+*	Created a multilingual children’s book that addressed healthy behaviors to be used in the hospital during recreation
+
+*	Exchanged culture and language with local patients and physician
