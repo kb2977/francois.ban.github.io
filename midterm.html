@@ -13,7 +13,7 @@
 
 <meta name="date" content="2018-10-18" />
 
-<title>Miterm</title>
+<title>Physical Activity Analysis</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -199,10 +199,13 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="instacart.html">Instacart</a>
+      <a href="instacart.html">Grocery Store Analysis</a>
     </li>
     <li>
-      <a href="midterm.html">Midterm</a>
+      <a href="midterm.html">Physical Activity</a>
+    </li>
+    <li>
+      <a href="midterm.html">Midterm Election</a>
     </li>
   </ul>
 </li>
@@ -233,15 +236,32 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Miterm</h1>
+<h1 class="title toc-ignore">Physical Activity Analysis</h1>
 <h4 class="author"><em>Francois Ban</em></h4>
 <h4 class="date"><em>10/18/2018</em></h4>
 
 </div>
 
 
-<div id="part-1-loading-cleaning-wrangling-data" class="section level2">
-<h2>Part 1: Loading, Cleaning, Wrangling Data</h2>
+<div id="just-line-break">
+
+</div>
+<br/>
+<div id="line-break-and-tab">
+
+</div>
+<div id="description" class="section level2">
+<h2>Description:</h2>
+<p>The data for this project was collected on a 63 year-old male with BMI 25, who was admitted to the Advanced Cardiac Care Center of Columbia University Medical Center and diagnosed with congestive heart failure (CHF). He wore an accelerometerdevice that continuously recorded physical activity for several months. The goal of this analysis was to understand patterns of physical activity over long periods of time; more generally, it is hoped that trends that emerge prior to and happen right after adverse clinical eventsand can be potentially used for dynamic update of patient status.</p>
+<div id="just-line-break">
+
+</div>
+<br/>
+<div id="line-break-and-tab">
+
+</div>
+<div id="part-1-loading-cleaning-wrangling-data" class="section level3">
+<h3>Part 1: Loading, Cleaning, Wrangling Data</h3>
 <pre class="r"><code>patient_data = 
   read_csv(file = &quot;./data/midterm_data.csv&quot;) %&gt;% 
   janitor::clean_names() %&gt;% 
@@ -261,8 +281,8 @@ $(document).ready(function () {
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <p>After loading and cleaning the datset, the following variables were included: activity_count, day, minute, week. There were 473760 observations over a total of 47 weeks. We have specific activity for each minute of each day of the week. The maximum activity count that was observed over a one-minute epoch was 10417 and the minimum activity count that was observed was 1. The most frequently observed activity count was 1 meaning many minutes throughout the day, this patient had minimal activity.</p>
 </div>
-<div id="part-2-activity-over-time" class="section level2">
-<h2>Part 2: Activity over Time</h2>
+<div id="part-2-activity-over-time" class="section level3">
+<h3>Part 2: Activity over Time</h3>
 <p>Below is a graph that determines if this participant became more active over time. We can see from the graph that although there are a couple of dips (i.e. at Week 3, at Week 12) there is a general upwards trend. In addition, after conducting a linear regression, we see that there is a positive linear relationship between week and average activity count (i.e. p-value - 0.0000142), meaning that as time goes, this patient increases in activity and therefore, his treatment is working and he is improving in health.</p>
 <pre class="r"><code>patient_data_week = 
   patient_data %&gt;% 
@@ -355,8 +375,8 @@ activity_data_over_time</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="midterm_files/figure-html/activity_data_over_time-1.png" width="90%" /></p>
 </div>
-<div id="part-3-activity-within-a-day" class="section level2">
-<h2>Part 3: Activity within a Day</h2>
+<div id="part-3-activity-within-a-day" class="section level3">
+<h3>Part 3: Activity within a Day</h3>
 <p>Below is the average activity count over 24 hours within a day. Using this graph, it is evident that this patient is most active around 9:00AM to 9:00PM each day. During this time, average activity count ranges from 300 to 400 and there is a sharp increase in activity count from 6:00AM to 9:00AM and a sharp decrease in activity count from 9:00PM to 11:59PM.</p>
 <pre class="r"><code>activity_over_day_plot = 
   patient_data %&gt;%
@@ -397,6 +417,7 @@ activity_over_day_plot</code></pre>
 activity_by_day_plot</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
 <p><img src="midterm_files/figure-html/activity_by_day-1.png" width="90%" /></p>
+</div>
 </div>
 
 

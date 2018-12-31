@@ -1,4 +1,4 @@
-name: "p8105_hw4_kb2977"
+name: "personal_website"
 output_dir: "."
 navbar:
   title: "Home"
@@ -7,9 +7,11 @@ navbar:
       href: resume.html
     - text: "Projects"
       menu:
-        - text: "Instacart"
+        - text: "Grocery Store Analysis"
           href: instacart.html
-        - text: "Midterm"
+        - text: "Physical Activity"
+          href: midterm.html
+        - text: "Midterm Election"
           href: midterm.html
     - icon: fa-envelope fa-lg
       href: mailto:<kb2977@cumc.columbia.edu>

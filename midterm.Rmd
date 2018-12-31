@@ -1,5 +1,5 @@
 ---
-title: "Miterm"
+title: "Physical Activity Analysis"
 author: "Francois Ban"
 date: "10/18/2018"
 output: html_document
@@ -19,7 +19,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-##Part 1: Loading, Cleaning, Wrangling Data
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+##Description:
+
+The data for this project was collected on a 63 year-old male with BMI 25, who was admitted to the Advanced Cardiac Care Center of Columbia University Medical Center and diagnosed with congestive heart failure (CHF). He wore an accelerometerdevice that continuously recorded physical activity for several months. The goal of this analysis was to understand patterns of physical activity over long periods of time; more generally, it is hoped that trends that emerge prior to and happen right after adverse clinical eventsand can be potentially used for dynamic update of patient status.
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+###Part 1: Loading, Cleaning, Wrangling Data
 
 ```{r pa_data}
 patient_data = 
@@ -36,7 +48,7 @@ patient_data =
 
 After loading and cleaning the datset, the following variables were included: `r ls(patient_data)`. There were `r nrow(patient_data)` observations over a total of `r count(distinct(patient_data, week))` weeks. We have specific activity for each minute of each day of the week. The maximum activity count that was observed over a one-minute epoch was `r max(patient_data$activity_count)` and the minimum activity count that was observed was `r min(patient_data$activity_count)`. The most frequently observed activity count was `r names(which.max(table(patient_data$activity_count)))` meaning many minutes throughout the day, this patient had minimal activity.
 
-##Part 2: Activity over Time
+###Part 2: Activity over Time
 
 Below is a graph that determines if this participant became more active over time.
 We can see from the graph that although there are a couple of dips (i.e. at Week 3, at Week 12) there is a general upwards trend. In addition, after conducting a linear regression, we see that there is a positive linear relationship between week and average activity count (i.e. p-value - 0.0000142), meaning that as time goes, this patient increases in activity and therefore, his treatment is working and he is improving in health.
@@ -112,7 +124,7 @@ labs(
 activity_data_over_time
 ```
 
-##Part 3: Activity within a Day
+###Part 3: Activity within a Day
 
 Below is the average activity count over 24 hours within a day. Using this graph, it is evident that this patient is most active around 9:00AM to 9:00PM each day. During this time, average activity count ranges from 300 to 400 and there is a sharp increase in activity count from 6:00AM to 9:00AM and a sharp decrease in activity count from 9:00PM to 11:59PM.
 
