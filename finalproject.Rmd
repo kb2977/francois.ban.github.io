@@ -1,6 +1,6 @@
 ---
 title: <center> Midterm Election 2018
-author: <center> Amadeia Rector | Courtney Chan | Pei Yang Hsieh | Qiu Xia Guan | Francois Ban 
+author: <center> Francois Ban | Amadeia Rector | Courtney Chan | Pei Yang Hsieh | Qiu Xia Guan 
 output: 
   html_document:
     theme: flatly
