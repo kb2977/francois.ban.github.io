@@ -1,11 +1,13 @@
 ---
-title: "Francois Ban"
+title: <center> Francois Ban
 output: 
   html_document:
     theme: flatly
 ---
 
-#### Quantitative Foundations Teaching Assistant
+<center>
+
+#### Department of Epidemiology, Certificate in Advanced Epidemiology
 #### Columbia University Mailman School of Public Health
 
 ---
