@@ -23,13 +23,15 @@ GPA: 4.00
 
 Bachelors of Science in Psychology
 
+Dean's List 2014 - 2017
+
 GPA: 3.73
 
 ---
 
 ###**SKILLS**
 
-R, SAS, Geographic Information Systems (GIS), IBM SPSS, InDesign, Vensim, Qualtrics, Dedoose, Coding Analysis Toolkit, Lucidchart, E-Prime, TOBI Eye Tracking, Near-Infrared Spectroscopy (NIRS), Python, Mechanical Turk, Microsoft Excel
+R, SQL, SAS, Mplus, Geographic Information Systems (GIS), IBM SPSS, InDesign, Vensim, Qualtrics, Dedoose, Coding Analysis Toolkit, Lucidchart, E-Prime, TOBI Eye Tracking, Near-Infrared Spectroscopy (NIRS), Python, Mechanical Turk, Microsoft Excel
 
 ---
 
