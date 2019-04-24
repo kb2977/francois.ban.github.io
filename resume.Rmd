@@ -5,7 +5,7 @@ output:
     theme: flatly
     highlight: tango
     toc: true
-    toc_depth: 4
+    toc_depth: 3
     toc_float: true
 ---
 
@@ -31,11 +31,19 @@ GPA: 3.73
 
 ###**SKILLS**
 
-R, SQL, SAS, Mplus, Geographic Information Systems (GIS), IBM SPSS, InDesign, Vensim, Qualtrics, Dedoose, Coding Analysis Toolkit, Lucidchart, E-Prime, TOBI Eye Tracking, Near-Infrared Spectroscopy (NIRS), Python, Mechanical Turk, Microsoft Excel
+R, SQL, SAS, Microsoft Access, Adobe Creative Suite & Office 365, Mplus, Geographic Information Systems (QGIS), IBM SPSS, InDesign, Vensim, Qualtrics, Dedoose, Coding Analysis Toolkit, Lucidchart, E-Prime, TOBI Eye Tracking, Near-Infrared Spectroscopy (NIRS), Python, Mechanical Turk, Microsoft Excel
 
 ---
 
 ###**WORK EXPERIENCE**
+
+**Masters Graduate Thesis**  *August 2018 – May 2019*
+
+*	Developed a research project on the effects of poor emotional self-regulation on potential development of binge eating disorders in young adults
+
+*	Collected patient data from Columbia Center for Children’s Environmental Health Obesity Project 
+
+*	Performed longitudinal statistical analyses using SAS and compiled results into a research thesis paper
 
 **Quantitative Foundations at Columbia University, Teaching Assistant**	 *August 2018 – Current*
 
@@ -77,21 +85,3 @@ R, SQL, SAS, Mplus, Geographic Information Systems (GIS), IBM SPSS, InDesign, Ve
 *	Developed behavioral recommendations using Lucidchart and increased the adherence to medication such as PrEP for patients in South Africa
 
 *	Coded interview responses using Dedoose into four categories (i.e. Initiation, Adherence, Sex, and HIV Testing) to detect patterns of beliefs and behaviors 
-
----
-
-###**AWARDS & SERVICE**
-
-**Senior Leadership Recognition** *May 2017*
-
-*	Nominated and awarded the senior leadership award in the context of Academic and Research category by Dr. Joseph Devine, associate dean of Dietrich College
-
-*	Acknowledgement for outstanding leadership proven by Senior Honors Thesis and its enhancing contributions to the community
-
-**Heredia Hospital - Heredia, Costa Rica**	*May 2016 – Aug 2016*
-
-*	Shadowed local doctors at the Medical Clinic to gain a first-hand experience of working as a physician in another country
-
-*	Created a multilingual children’s book that addressed healthy behaviors to be used in the hospital during recreation
-
-*	Exchanged culture and language with local patients and physician

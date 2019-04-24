@@ -1,5 +1,5 @@
 ---
-title: "Fitness"
+title: "Running"
 author: "Francois Ban"
 date: "1/17/2019"
 output: 
@@ -11,5 +11,42 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Pittsburgh Marathon 2019
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
 
+## Pittsburgh Marathon, May 2017
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+It was my last year of college and I wanted to end senior year with a BANG. So what do I do? Sign up for a full marathon with 5 of my friends. Obviously, you can tell by the featured picture that only three of us made it to the end...
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+<img src="image/PittsburghMarathon.jpg" style="width:45%"> 
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+I was always active growing up - took part in varsity swimming and track - even took fencing up for a bit! But my decision to sign up for this race wasn't solely for fitness and health. I wanted to prove to myself that no matter how hard the feat, I could do anything if I put my mind to it.
+
+This wasn't easy... Actually, it was most likely one of the hardest things I had ever done. From not being able to indulge in late night fiascos because of an early morning run to weekly long runs that always ended in painful blisters to meticulously counting macros to fuel my workouts, I dedicated my last couple months of senior year to complete this race.
+
+But thankfully with the support of my friends and the finish line in mind, I knew I could do it.
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+## Chicago Marathon, October 2019
+
+<div id="just-line-break"></div>
+<br/>
+<div id="line-break-and-tab"></div>
+
+What's Next ... Soon to come :)
